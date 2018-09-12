@@ -14,9 +14,9 @@ temp_list1 = 'El parqueadero con nombre: '
 
 for message in consumer:
 
-    temp_list1+=(message.value[“nombre”])
+    temp_list1+=(message.value['nombre'])
     temp_list1+=' tiene '
-    temp_list1+=(message.value[“disponibles”])
+    temp_list1+=(message.value['disponibles'])
     temp_list1+=' parqueaderos disponibles y tiene  '
     temp_list1+=(message.value['place'] == "ocupadosClientesNidoo")
     temp_list1+='  ocupados por clients nidoo en la hora: '
