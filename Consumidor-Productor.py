@@ -18,7 +18,7 @@ for message in consumer:
     temp_list1+=' tiene '
     temp_list1+=str((message.value['disponibles']))
     temp_list1+=' parqueaderos disponibles y tiene  '
-    temp_list1+=str((message.value['place'] == "ocupadosClientesNidoo"))
+    temp_list1+=str((message.value['ocupadosClientesNidoo']))
     temp_list1+='  ocupados por clients nidoo en la hora: '
     temp_list1+=(message.value['time'])
     producer.send('Clientes', {'Mensaje':temp_list1})
